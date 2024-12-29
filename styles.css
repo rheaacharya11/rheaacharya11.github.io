@@ -13,6 +13,7 @@ body {
     background-color:  #A7B59E;
     font-family: 'Roboto', sans-serif;
     display: flex;
+    cursor: url('img/pixel_cursor.jpg');
     flex-direction: column; /* Ensure content flows vertically */
     align-items: center; /* Center the content horizontally */
     margin: 0;
@@ -26,6 +27,50 @@ body.writing{
 
 body.writing p {
     color:#ffffff;
+}
+
+body.me{
+    background-color:#D8959B
+}
+
+body.me p {
+    color:#F9ddd8; 
+}
+
+/* Photo Border */
+.photo-border {
+    width: 100%;
+    height: auto;
+    border: 15px solid #F9ddd8; /* Add a colored border */
+    border-radius: 0px; /* Optional: Add rounded corners */
+}
+
+/* Grid Styles */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+    padding: 20px;
+}
+
+.double-up {
+    grid-column: span 2; /* Merge two columns */
+}
+
+.grid-item {
+    padding: 20px;
+    text-align : left;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    .double-up{
+        grid-column: span 1;
+    }
 }
 
 /* Navbar Styles */
@@ -71,7 +116,7 @@ body.writing p {
     text-decoration: none;
     font-family: 'Biago', sans-serif;
     padding: 10px 20px;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     transition: color 0.3s ease;
 }
 
@@ -84,7 +129,7 @@ body.writing p {
     display: none;
     background: none;
     border: none;
-    color: #000; /* Ensure the button text or icon is visible */
+    color: #F9ddd8; /* Ensure the button text or icon is visible */
     cursor: pointer;
     z-index: 1100; /* Ensure it appears above other elements */
 }
@@ -267,4 +312,81 @@ p {
     font-size: 1.1rem;
     font-weight: 100;
     margin: 5px 0;
+}
+
+
+/* Skills Button Styles */
+/* Basic styling for all skill elements */
+.skill {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 5px;
+    width: 100px;  /* Or adjust based on your preference */
+    display: inline-block;  /* Makes each skill appear in a line, wrapping as needed */
+    text-align: center;  /* Centers the text inside each skill box */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);  /* Optional: Adds a subtle shadow for better visual separation */
+    transition: transform 0.2s;  /* Smooth transformation on hover or other interactions */
+}
+
+/* Hover effect to slightly enlarge a skill box */
+.skill:hover {
+    transform: scale(1.1);
+    cursor: pointer;  /* Changes the cursor to indicate that the skill is interactable */
+}
+
+/* Example styles for different levels - changes background color based on skill level */
+.expert {
+    background-color: lightgreen;
+}
+.intermediate {
+    background-color: lightblue;
+}
+.beginner {
+    background-color: lightgrey;
+}
+
+
+
+/* Work Container */
+.work-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Circle Styles */
+.circle {
+    width: 50px;
+    height: 50px;
+    background-color: green;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    z-index: 1;
+}
+
+/* Description Styles */
+.description {
+    display: none;
+    background-color: #f9f9f9cc;
+    color: #333;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    text-align: left;
+    position: absolute;
+    z-index: 2;
+}
+
+/* Close Button Styles */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #333;
+    z-index: 3;
 }
