@@ -8,6 +8,26 @@
     box-sizing: border-box;
 }
 
+/* Default white cursor for the whole page */
+html {
+    cursor: url('white-cursor.png') 16 16, auto;  /* White cursor */
+  }
+  
+  /* White pointer cursor for clickable elements */
+  a, button {
+    cursor: url('white-pointer.png') 16 16, pointer;  /* White pointer cursor */
+  }
+  
+  /* Black cursor for specific section or elements */
+  .black-cursor {
+    cursor: url('cursor.png') 16 16, auto;  /* Black cursor */
+  }
+  
+  /* Black pointer cursor for clickable elements in black-cursor context */
+  .black-cursor a, .black-cursor button {
+    cursor: url('pointer.png') 16 16, pointer;  /* Black pointer cursor */
+  }
+
 /* Body Styles */
 body {
     /*
@@ -17,7 +37,7 @@ body {
     font-family: 'Roboto', sans-serif;
     display: flex;
     font-style: normal;
-    cursor: url('img/pixel_cursor.jpg');
+    cursor: url('cursor.ico');
     flex-direction: column; /* Ensure content flows vertically */
     align-items: center; /* Center the content horizontally */
     margin: 0;
@@ -38,6 +58,11 @@ body.writing p {
     color:#000000;
 }
 
+body.me p {
+    color:#3e3e3e;
+    font-weight: normal;
+}
+
 body.work p {
     color:#000000;
 }
@@ -48,9 +73,7 @@ body.me{
 }
 */
 
-body.me p {
-    color:#F9ddd8; 
-}
+
 
 /* Background */
 
@@ -105,7 +128,7 @@ body.me p {
 .navbar {
     width: 100%;
     --navbar-height: 60px;
-    background-color: #35522b;
+    background-color: #3a3a3a;
     padding: 10px 0;
     position: fixed; /* Stick to the top of the page */
     top: 0;
@@ -187,7 +210,7 @@ body.me p {
         top: 60px;
         left: 0;
         width: 100%;
-        background-color: #799567;
+        background-color: #3a3a3a;
         padding: 20px 0;
         gap: 15px;
         border-top: 1px solid #ccc;
@@ -245,6 +268,15 @@ body.me p {
     text-align: center;
 }
 
+.index-page {
+    background-image: url('img/Asset 3.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    width: 100%;
+  }
+
 .intro {
     width: 100%; /* Background color for intro section */
     padding-top: 33.33vh; /* Start 1/3 down the page */
@@ -254,11 +286,17 @@ body.me p {
     padding-bottom : 20vh;
 }
 
+.text-shadow {
+    color: white; /* White text color */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4); /* Shadow properties */
+}
+
 .intro-content {
     max-width: 850px; /* Limit the width of the content */
     width: 100%;
     padding: 20px;
     text-align: left; /* Align text to the left */
+    
 }
 
 .section-header {
@@ -278,12 +316,26 @@ body.me p {
 }
 
 @font-face {
+    font-family: 'Biago';
+    src: url('biago/Biago-SemiBold.ttf') format('truetype');
+    font-weight: 600; /* Semi-bold weight */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Rhea';
+    src: url('Rlaprint-Regular.ttf') format('truetype');
+    font-weight: 400; /* Semi-bold weight */
+    font-style: normal;
+}
+
+
+@font-face {
     font-family: 'Roboto';
     src: url('RobotoSlab-Regular.ttf') format('truetype');
     font-weight: 400; /* Semi-bold weight */
     font-style: normal;
 }
-
 
 @font-face {
     font-family: 'Roboto';
@@ -413,7 +465,7 @@ p {
 }
 
 .half-highlight-yellow {
-    background: linear-gradient(to top, #faedcb 40%, transparent 40%); /* Pastel pink on the bottom half */
+    background: linear-gradient(to top, #f7d06e 40%, transparent 40%); /* Pastel pink on the bottom half */
     padding: 0 5px;   /* Adjust padding as needed */
     text-decoration: none;
 }
@@ -425,10 +477,52 @@ p {
 }
 
 .half-highlight-green {
-    background: linear-gradient(to top, #afb59e 40%, transparent 40%); /* Pastel pink on the bottom half */
+    background: linear-gradient(to top, #99c8cd 40%, transparent 40%); /* Pastel pink on the bottom half */
     padding: 0 5px;   /* Adjust padding as needed */
     text-decoration: none;
 }
+
+.learning-text {
+    position: relative;
+    display: inline-block;
+    word-wrap: break-word;
+    padding-bottom: 25px; /* Adjust the padding as needed to create space for the line */
+}
+
+.learning-text::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 200%;
+    max-width:1050px;
+    height: 25px; /* Adjust the height as needed */
+    background-image: url('img/line.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.work-text {
+    position: relative;
+    display: inline-block;
+    word-wrap: break-word;
+    padding-bottom: 25px; /* Adjust the padding as needed to create space for the line */
+}
+
+.work-text::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 200%;
+    max-width:1050px;
+    height: 25px; /* Adjust the height as needed */
+    background-image: url('img/line.png');
+    transform: scaleX(-1);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 
 /* Skills Button Styles */
 /* Basic styling for all skill elements */
@@ -451,6 +545,7 @@ p {
 
 /* Images */
 .image-container {
+    display:none;
     width: 100%;
     padding-top: 60%; /* Aspect ratio of 1:3 */
     position: relative;
@@ -464,6 +559,9 @@ p {
     width: 100%;
     height: 100%;
     object-fit: cover; /* Ensures the image covers the container */
+}
+.image-container:hover {
+    border: solid 10px #99c8cd;
 }
 
 .responsive-image {
