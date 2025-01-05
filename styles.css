@@ -152,6 +152,7 @@ body.me{
 }
 
 .navbar-links {
+    color: white;
     list-style-type: none;
     display: flex;
     gap: 20px;
@@ -163,7 +164,6 @@ body.me{
 }
 
 .navbar-links li a {
-    color: #F9ddd8;
     text-decoration: none;
     font-family: 'Biago', sans-serif;
     padding: 10px 20px;
@@ -180,6 +180,9 @@ body.me{
     text-underline-offset: 4px;
 }
 
+.play-selected {
+    position: relative;
+}
 .menu-toggle {
     font-size: 2rem;
     display: none;
@@ -307,6 +310,26 @@ body.me{
     align-items: left;
     padding-bottom: 30vh;
 }
+
+.grey{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-image: url('img/white.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: relative;
+    background-position: center;
+    cursor: url('path/to/black-cursor.png'), auto; /* Assuming you have a black cursor image */
+  }
+  
+  /* Styles for small screens */
+  @media (max-width: 800px) { /* Adjust 768px according to the breakpoint you consider 'small' */
+    .grey {
+      background: #efeded; /* Light grey background */
+      background-image: none; /* Removes the background image */
+    }
+  }
 /* Font Styles */
 @font-face {
     font-family: 'Biago';
@@ -411,7 +434,7 @@ h5 {
     color: black;
     font-weight: 200;
     font-style: bold;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     line-height: 30px;
     margin: 5px 0;
 }
@@ -492,6 +515,13 @@ p {
     text-decoration: none;
 }
 
+.half-highlight-dark-pink {
+    background: linear-gradient(to top, #8e5880 40%, transparent 40%); /* Pastel pink on the bottom half */
+    padding: 0 5px;   /* Adjust padding as needed */
+    text-decoration: none;
+}
+
+
 .learning-text {
     position: relative;
     display: inline-block;
@@ -548,8 +578,8 @@ p {
   
   /* Create four equal columns that sits next to each other */
   .column {
-    flex: 33%;
-    max-width: 33%;
+    flex: 25%;
+    max-width: 25%;
     padding: 0 4px;
   }
   
