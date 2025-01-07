@@ -46,32 +46,88 @@ body {
     color: #ffffff;
 }
 /* Colours */
-body.writing{
-    background-color:#ffffff
-}
 
 body.learn{
     background-color: lightcyan
 }
 
-body.writing p {
-    color:#000000;
-}
-
 body.me p {
-    color:#3e3e3e;
+    color:#666666;
+    font-size: 0.95rem;
     font-weight: normal;
 }
 
 body.work p {
-    color:#000000;
+    color: #3e3c4f;;
 }
 
+h9{
+    font-family: 'Roboto', sans-serif;
+    font-weight:  100;
+    color: #666666; /* Medium grey color for subtitles */
+    font-size: 14px;
+    margin: 0;
+    margin-top: 4px;
+    margin-bottom: 12px; /* More spacing at the bottom */
+}
 /*
 body.me{
     /* background-color:#D8959B 
 }
 */
+
+.portfolio {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0); /* Transparent background */
+    border: 8px solid rgba(255, 255, 255, 0); /* Transparent border */
+    flex: 45%;
+    max-width: 45%;
+    transition: 0.3s;
+    transition: all 0.3s ease-in-out;
+    margin: 10px;
+    overflow: hidden; /* Ensures no content spills out */
+    border-radius: 8px; /* Rounded corners */
+}
+
+.card:hover {
+    background-color: rgba(255, 255, 255, 0.6); /* Transparent background */
+    border: 15px solid rgba(255, 255, 255, 0.6); /* Transparent border */
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); /* Enhanced shadow for 3D effect */
+    transform: scale(1.05); /* Slightly larger scale */
+    opacity: 1;
+    z-index: 1; /* Ensure it's above other elements */
+}
+
+.card img {
+    width: 100%; /* Adjust based on design */
+    height: auto;
+    border-radius: 2%; /* Fully rounded images *//* Space from the top of the card */
+    transition: opacity 0.3s ease-in-out; /* Smooth transition for image opacity */
+}
+.container {
+    padding: 5px 5px;
+}
+
+.portfolio h4 {
+    color: #333333; /* Dark grey color for text */
+    font-size: 18px; /* Larger font size for titles */
+    margin-top: 5px;
+    margin: 0;
+}
+
+.portfolio p {
+    color: #666666; /* Medium grey color for subtitles */
+    font-size: 14px;
+    margin: 0;
+    margin-top: 4px;
+    margin-bottom: 12px; /* More spacing at the bottom */
+}
 
 
 
@@ -92,7 +148,6 @@ body.me{
     border-radius: 0px; /* Optional: Add rounded corners */
 }
 
-/* Grid Styles */
 .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -110,9 +165,40 @@ body.me{
 }
 
 .grid-item {
-    padding: 20px;
+    background-color: rgba(255, 255, 255, 0); /* Transparent background */
+    border: 8px solid rgba(255, 255, 255, 0); 
     text-align : left;
+    padding: 20px;
+    overflow: hidden; /* Ensures no content spills out */
+    border-radius: 8px; /* Rounded corners */
 }
+/*
+.grid-item:hover {
+    background-color: rgba(255, 255, 255, 0.6); /* Transparent background 
+    border: 15px solid rgba(255, 255, 255, 0.6); /* Transparent border 
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); /* Enhanced shadow for 3D effect 
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.05);
+}
+*/
+
+.grid-item h3 {
+    font-family: 'Biago';
+    color: #333333; /* Dark grey color for text */
+    font-size: 18px; /* Larger font size for titles */
+    margin-top: 5px;
+    margin: 0;
+}
+
+.grid-item h8 {
+    color: #666666; /* Medium grey color for subtitles */
+    font-size: 14px;
+    margin: 0;
+    margin-top: 4px;
+    margin-bottom: 12px; /* More spacing at the bottom */
+}
+
+
 
 /* Responsive Styles */
 @media (max-width: 768px) {
@@ -124,11 +210,18 @@ body.me{
     }
 }
 
+.bold-link-hover:hover{
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 4px;
+}
+
 /* Navbar Styles */
 .navbar {
     width: 100%;
     --navbar-height: 60px;
-    background-color: #3a3a3a;
+    background-color: #3e3c4f;
     padding: 10px 0;
     position: fixed; /* Stick to the top of the page */
     top: 0;
@@ -137,13 +230,13 @@ body.me{
     display: flex;
     justify-content: space-between; /* Space between logo and links */
     align-items: center;
-    color: #F9ddd8;
+    color: #fff9ea;
 }
 
 .logo {
     font-family: 'biago', sans-serif;
     font-size: 1.5rem;
-    color: #F9ddd8;
+    color: #fff9ea;
     margin-left: 20px;
 }
 
@@ -152,7 +245,7 @@ body.me{
 }
 
 .navbar-links {
-    color: white;
+    color: fff9ea;
     list-style-type: none;
     display: flex;
     gap: 20px;
@@ -188,7 +281,7 @@ body.me{
     display: none;
     background: none;
     border: none;
-    color: #F9ddd8; /* Ensure the button text or icon is visible */
+    color: #fff9ea; /* Ensure the button text or icon is visible */
     cursor: pointer;
     z-index: 1100; /* Ensure it appears above other elements */
 }
@@ -315,18 +408,21 @@ body.me{
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    background: #fcf6e7; 
+    /*
     background-image: url('img/white.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: relative;
     background-position: center;
+    */
     cursor: url('cursor.png'), auto; /* Assuming you have a black cursor image */
   }
   
   /* Styles for small screens */
   @media (max-width: 800px) { /* Adjust 768px according to the breakpoint you consider 'small' */
     .grey {
-      background: #efeded; /* Light grey background */
+      background: #fcf6e7; /* Light grey background */
       background-image: none; /* Removes the background image */
     }
   }
@@ -421,7 +517,7 @@ h4 {
 
 h3 {
     font-family: 'Roboto', sans-serif;
-    color: black;
+    color: #3e3c4f;
     font-weight: 200;
     font-style: bold;
     font-size: 1.2rem;
@@ -429,19 +525,27 @@ h3 {
     margin: 5px 0;
 }
 
+
+
 h5 {
     font-family: 'Roboto', sans-serif;
-    color: black;
+    color:  #3e3c4f;
     font-weight: 200;
     font-style: bold;
     font-size: 1.4rem;
     line-height: 30px;
     margin: 5px 0;
 }
+h1 {
+    font-family: 'Roboto', sans-serif;
+    color:  #3e3c4f;
+    font-weight:  100;
+    font-size: 0.8rem;
+}
 
 h8 {
     font-family: 'Roboto', sans-serif;
-    color: black;
+    color:  #3e3c4f;
     font-weight:  100;
     font-size: 0.8rem;
 }
@@ -498,25 +602,25 @@ p {
 }
 
 .half-highlight-yellow {
-    background: linear-gradient(to top, #f7d06e 40%, transparent 40%); /* Pastel pink on the bottom half */
+    background: linear-gradient(to top, #f5d687 40%, transparent 40%); /* Pastel pink on the bottom half */
     padding: 0 5px;   /* Adjust padding as needed */
     text-decoration: none;
 }
 
 .half-highlight-pink {
-    background: linear-gradient(to top, lightpink 40%, transparent 40%); /* Pastel pink on the bottom half */
+    background: linear-gradient(to top, #f2c3d6 40%, transparent 40%); /* Pastel pink on the bottom half */
     padding: 0 5px;   /* Adjust padding as needed */
     text-decoration: none;
 }
 
 .half-highlight-green {
-    background: linear-gradient(to top, #99c8cd 40%, transparent 40%); /* Pastel pink on the bottom half */
+    background: linear-gradient(to top, #bacdda 40%, transparent 40%); /* Pastel pink on the bottom half */
     padding: 0 5px;   /* Adjust padding as needed */
     text-decoration: none;
 }
 
 .half-highlight-dark-pink {
-    background: linear-gradient(to top, #8e5880 40%, transparent 40%); /* Pastel pink on the bottom half */
+    background: linear-gradient(to top, #ae6b9c 40%, transparent 40%); /* Pastel pink on the bottom half */
     padding: 0 5px;   /* Adjust padding as needed */
     text-decoration: none;
 }
