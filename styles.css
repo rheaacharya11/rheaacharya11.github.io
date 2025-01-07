@@ -320,7 +320,7 @@ body.me{
     background-repeat: no-repeat;
     background-attachment: relative;
     background-position: center;
-    cursor: url('path/to/black-cursor.png'), auto; /* Assuming you have a black cursor image */
+    cursor: url('cursor.png'), auto; /* Assuming you have a black cursor image */
   }
   
   /* Styles for small screens */
