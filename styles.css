@@ -339,7 +339,7 @@ body.me{
 .intro-box {
     border: 5px solid transparent;
     padding: 20px;
-    background-color: rgba(243, 186, 186, 0.3);
+    background-color: rgba(255, 255, 255, 0.3);
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
 }
@@ -366,7 +366,7 @@ body.me{
 }
 
 .index-page {
-    background-image: url('img/Asset 3.png');
+    background-image: url('img/new.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -489,7 +489,7 @@ h6 {
     color: #ffffff;
     font-weight: bold;
     font-size: 3.2rem;
-    line-height: 50px;
+    line-height: 100px;
     text-align: left;
     margin-bottom: 15px;
 }
@@ -582,7 +582,7 @@ a.hover{
 }
 
 .hover-link:hover {
-    background: linear-gradient(to top, #F3BABA 50%, transparent 50%);
+    background: linear-gradient(to top, #f4f1e0 50%, transparent 50%);
     padding: 0 5px;
 }
 
@@ -614,7 +614,7 @@ p {
 }
 
 .half-highlight-pink {
-    background: linear-gradient(to top, #f2c3d6 40%, transparent 40%); /* Pastel pink on the bottom half */
+    background: linear-gradient(to top, #f7b8d1 40%, transparent 40%); /* Pastel pink on the bottom half */
     padding: 0 5px;   /* Adjust padding as needed */
     text-decoration: none;
 }
