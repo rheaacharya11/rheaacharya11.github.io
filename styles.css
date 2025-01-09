@@ -294,6 +294,11 @@ body.me{
     padding: 20px;
     padding-top: calc(var(--navbar-height, 60px)); /* Add padding to prevent overlap */
 }
+.half-highlight-dark-pink {
+    background: linear-gradient(to top, #ae6b9c 40%, transparent 40%); /* Pastel pink on the bottom half */
+    padding: 0 5px;   /* Adjust padding as needed */
+    text-decoration: none;
+}
 
 @media (max-width: 768px) {
     .menu-toggle {
@@ -635,11 +640,7 @@ p {
     text-decoration: none;
 }
 
-.half-highlight-dark-pink {
-    background: linear-gradient(to top, #ae6b9c 40%, transparent 40%); /* Pastel pink on the bottom half */
-    padding: 0 5px;   /* Adjust padding as needed */
-    text-decoration: none;
-}
+
 
 
 .learning-text {
