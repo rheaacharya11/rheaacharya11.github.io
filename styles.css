@@ -307,11 +307,6 @@ body.me{
 
     .half-highlight-dark-pink {
         background: none; /* Pastel pink on the bottom half */
-        padding: 0 5px;   /* Adjust padding as needed */
-        text-decoration: underline;
-        text-decoration-style: dotted;
-        text-decoration-thickness: 3px;
-        text-underline-offset: 4px;
     }
     
 
