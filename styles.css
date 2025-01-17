@@ -10,12 +10,12 @@
 
 /* Default white cursor for the whole page */
 html {
-    cursor: url('white-cursor.png') 16 16, auto;  /* White cursor */
+    cursor: url('cursor.png') 16 16, auto;  /* White cursor */
   }
   
   /* White pointer cursor for clickable elements */
   a, button {
-    cursor: url('white-pointer.png') 16 16, pointer;  /* White pointer cursor */
+    cursor: url('pointer.png') 16 16, pointer;  /* White pointer cursor */
   }
   
   /* Black cursor for specific section or elements */
@@ -485,7 +485,7 @@ body.me{
 /* Typography Styles */
 h2 {
     font-family: 'Roboto', sans-serif;
-    color: #ffffff;
+    color: #3e3c4f;;
     font-weight: normal;
     font-style: normal;
     font-size: 1.5rem;
@@ -496,7 +496,7 @@ h2 {
 
 h6 {
     font-family: 'Biago', sans-serif;
-    color: #ffffff;
+    color: #3e3c4f;
     font-weight: bold;
     font-size: 3.2rem;
     line-height: 100px;
@@ -519,7 +519,7 @@ h7 {
 
 h4 {
     font-family: 'Biago', sans-serif;
-    color: white;
+    color: #3e3c4f;;
     font-weight: 200;
     font-size: 2.2rem;
     line-height: 30px;
